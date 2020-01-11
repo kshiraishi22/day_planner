@@ -1,14 +1,17 @@
 // Define variables
 
-var nineAm = document.querySelector("nineAm");
-var tenAm = document.querySelector("tenAm");
-var elevenAm = document.querySelector("elevenAm");
-var twelvePm = document.querySelector("twelvePm")
-var onePm = document.querySelector("onePm");
-var twoPm = document.querySelector("twoPm");
-var threePm = document.querySelector("threePm");
-var fourPm = document.querySelector("fourPm");
-var fivePm = document.querySelector("fivePm");
+var nineAm = document.querySelector("#nineAm");
+var tenAm = document.querySelector("#tenAm");
+var elevenAm = document.querySelector("#elevenAm");
+var twelvePm = document.querySelector("#twelvePm")
+var onePm = document.querySelector("#onePm");
+var twoPm = document.querySelector("#twoPm");
+var threePm = document.querySelector("#threePm");
+var fourPm = document.querySelector("#fourPm");
+var fivePm = document.querySelector("#fivePm");
+
+var form_9 = document.querySelector("#form_9");
+var storeForm_9 = localStorage.getItem("storeForm_9");
 
 // current time and date
 $(document).ready(function() {
@@ -17,21 +20,19 @@ $(document).ready(function() {
   $(".time-date").css("text-align","center");
 
 // create an EventListener for the save buttons
+// link save button to local storage
 
 $(".btn9").click(function() {
   console.log("this works!!!");
+  localStorage.setItem("storeForm_9");
 });
 
 });
 
-// (Watch from 1:31 from Jan 3rd lecture)
 
 // Choose colors and color code the individual hrs (how to color the text area)
 
 // Create a if/then statement for the past/present/future hours to determine color
-
-
-// link save button to local storage
 
 // Align the text box where the hours are located 
 
