@@ -9,9 +9,24 @@ var twoPm = document.querySelector("#twoPm");
 var threePm = document.querySelector("#threePm");
 var fourPm = document.querySelector("#fourPm");
 var fivePm = document.querySelector("#fivePm");
+var btn9 = document.querySelector(".btn9")
 
-var form_9 = document.querySelector("#form_9");
-var storeForm_9 = localStorage.getItem("storeForm_9");
+var formInput_9 = document.querySelector("#formInput_9");
+
+renderLastRegistered();
+
+function renderLastRegistered() {
+  var saveForm_9 = localStorage.getItem("saveForm_9");
+  saveForm_9.textContent = saveForm_9;
+
+  btn9.addEventListener("click", function(event) {
+    event.preventDefault();
+    var saveForm_9 = document.querySelector("#formInput_9").value;
+
+    localStorage.setItem("saveForm_9", saveForm_9);
+    renderLastRegistered();
+  });
+
 
 // current time and date
 $(document).ready(function() {
@@ -19,15 +34,18 @@ $(document).ready(function() {
   var displayCurrentTime = $(".time-date").text(currentTime);
   $(".time-date").css("text-align","center");
 
+  });
+};
 // create an EventListener for the save buttons
 // link save button to local storage
 
-$(".btn9").click(function() {
-  console.log("this works!!!");
-  localStorage.setItem("storeForm_9");
-});
+// $(".btn9").click(function(event) {
+//   event.preventDefault();
 
-});
+
+  
+
+
 
 
 // Choose colors and color code the individual hrs (how to color the text area)
