@@ -9,23 +9,9 @@ var twoPm = document.querySelector("#twoPm");
 var threePm = document.querySelector("#threePm");
 var fourPm = document.querySelector("#fourPm");
 var fivePm = document.querySelector("#fivePm");
-var btn9 = document.querySelector(".btn9")
 
-var formInput_9 = document.querySelector("#formInput_9");
 
-renderLastRegistered();
-
-function renderLastRegistered() {
-  var saveForm_9 = localStorage.getItem("saveForm_9");
-  saveForm_9.textContent = saveForm_9;
-
-  btn9.addEventListener("click", function(event) {
-    event.preventDefault();
-    var saveForm_9 = document.querySelector("#formInput_9").value;
-
-    localStorage.setItem("saveForm_9", saveForm_9);
-    renderLastRegistered();
-  });
+var formInput_9 = document.querySelector(".formInput_9");  
 
 
 // current time and date
@@ -34,16 +20,25 @@ $(document).ready(function() {
   var displayCurrentTime = $(".time-date").text(currentTime);
   $(".time-date").css("text-align","center");
 
-  });
-};
 // create an EventListener for the save buttons
 // link save button to local storage
 
-// $(".btn9").click(function(event) {
-//   event.preventDefault();
+  renderLastRegistered();
 
+  function renderLastRegistered() {
+    for (i = 9; i < 17; i++) {
+      var saveForm_i = localStorage.getItem("saveForm_" + i);
+      $(".formInput_" + i).val(saveForm_i);
+      
+      $(".btn" + i).click(function(e) {
+        e.preventDefault();
+        var saveForm_i = $(".formInput_" + i).val();
+        localStorage.setItem("saveForm_" + i, saveForm_i);
 
-  
+      });
+    };
+  }
+});
 
 
 
