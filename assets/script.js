@@ -36,18 +36,20 @@ $(document).ready(function() {
       var parent = $("<div class='row time-block'>");
       var timeCOL = $("<div class='hour col-1'>").text(hourTXT);
       var textCOL = $("<textarea class='description col-10'>").addClass(timeClass).text(event);
+      textCOL.attr("data-attribute", i);
       var saveBtn = $("<button class='saveBtn col-1'>").text("Save");
 
       parent.append(timeCOL, textCOL, saveBtn);
       scheduleELEM.append(parent);
     }
 
-    var textInput = document.querySelector(".description");
-    var storedInput = JSON.parse(localStorage.getItem("input")) || []; 
-
     var saveBtnClick = $(".saveBtn");
+    var textInput = $(".description").val();
 
   $(saveBtnClick).on("click", function() {
+    var storedInput = JSON.parse(localStorage.getItem("input")) || [];
+    var formFields = JSON.stringify(localStorage.setItem("Test", textInput)); 
+
     console.log("this works");
 
 // Comment out to make the code more readable (html/css/js)
