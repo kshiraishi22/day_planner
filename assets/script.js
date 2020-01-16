@@ -1,3 +1,5 @@
+$(document).ready(function() {
+
 // Define variables
 var currentDayELEM = $("#currentDay");
 var scheduleELEM = $("#schedule");
@@ -19,7 +21,6 @@ for (var i = 9; i <= 17; i++) {
 }
 
 // Function for creating rows with time, textbox and save button from 9am to 5pm and color coding based on time
-$(document).ready(function() {
   function makeRow(hour) {
     var now = moment();
     var thisHours = moment(hour, "H");
@@ -44,15 +45,13 @@ $(document).ready(function() {
     parent.append(timeCOL, textCOL, saveBtn);
     scheduleELEM.append(parent);
   }
-
-  $(saveBtn).on("click", function() {
-
-
-
-
+console.log(saveBtn);
+  // $(saveBtn).on("click", function() {
 
 // Comment out to make the code more readable (html/css/js)
 
 // ReadMe file
 
-
+    
+  
+});
