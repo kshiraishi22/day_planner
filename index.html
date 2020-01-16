@@ -1,121 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Daily Planner</title>
-
-
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/style.css">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/style.css" />
+  <title>Work Day Scheduler</title>
 </head>
+
 <body>
+  <header class="jumbotron">
+    <h1 class="display-3">Work Day Scheduler</h1>
+    <p class="lead">A simple calendar app for scheduling your work day</p>
+    <p id="currentDay" class="lead">&nbsp;</p>
+  </header>
+  <div class="container" id="schedule">
+    <!-- Timeblocks go here -->
+    
+  </div>
 
-  <div class="jumbotron">
-        <h1 class="display-4 text-center">Daily Planner</h1>
-        <p class="lead"></p>
-        <hr class="my-4">
-        <p class="text-center">Daily schedule for people to know what I'm doing</p>
-        <p class="time-date"></p>
-    </div>
-
-  <div class ="planner container">
-    <div class="nineAm input-group input-group-lg">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="inputGroup-sizing-lg">9am</span>
-        </div>
-        <input type="text" class="form-control formInput_9" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
-        <div class="input-group-append">
-            <button class="btn9 btn-outline-secondary" type="button">Save</button>
-          </div>
-      </div>
-    
-  <div class="tenAm input-group input-group-lg">
-    <div class="input-group-prepend">
-      <span class="input-group-text" id="inputGroup-sizing-lg">10am</span>
-    </div>
-    <input type="text" class="form-control formInput_10" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
-    <div class="input-group-append">
-        <button class="btn10 btn-outline-secondary" type="button">Save</button>
-      </div>
-  </div>
-    
-  <div class="elevenAm input-group input-group-lg">
-    <div class="input-group-prepend">
-      <span class="input-group-text" id="inputGroup-sizing-lg">11am</span>
-    </div>
-    <input type="text" class="form-control formInput_11" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
-    <div class="input-group-append">
-        <button class="btn11 btn-outline-secondary" type="button">Save</button>
-      </div>
-    </div>
-    
-  <div class="twelvePm input-group input-group-lg">
-    <div class="input-group-prepend">
-      <span class="input-group-text" id="inputGroup-sizing-lg">12pm</span>
-    </div>
-    <input type="text" class="form-control formInput_12" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
-    <div class="input-group-append">
-        <button class="btn12 btn-outline-secondary" type="button">Save</button>
-      </div>
-  </div>
-    
-  <div class="onePm input-group input-group-lg">
-    <div class="input-group-prepend">
-      <span class="input-group-text" id="inputGroup-sizing-lg">1pm</span>
-    </div>
-    <input type="text" class="form-control formInput_13" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
-    <div class="input-group-append">
-        <button class="btn1 btn-outline-secondary" type="button">Save</button>
-      </div>
-  </div>
-    
-  <div class="twoPm input-group input-group-lg">
-    <div class="input-group-prepend">
-      <span class="input-group-text" id="inputGroup-sizing-lg">2pm</span>
-    </div>
-    <input type="text" class="form-control formInput_14" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
-    <div class="input-group-append">
-        <button class="btn2 btn-outline-secondary" type="button">Save</button>
-      </div>
-  </div>
-      
-  <div class="threePm input-group input-group-lg">
-    <div class="input-group-prepend">
-      <span class="input-group-text" id="inputGroup-sizing-lg">3pm</span>
-    </div>
-    <input type="text" class="form-control formInput_15" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
-    <div class="input-group-append">
-        <button class="btn3 btn-outline-secondary" type="button">Save</button>
-      </div>
-    </div>
-        
-  <div class="fourPm input-group input-group-lg">
-    <div class="input-group-prepend">
-      <span class="input-group-text" id="inputGroup-sizing-lg">4pm</span>
-    </div>
-    <input type="text" class="form-control formInput_16" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
-    <div class="input-group-append">
-        <button class="btn4 btn-outline-secondary" type="button">Save</button>
-      </div>
-    </div>
-        
-  <div class="fivePm input-group input-group-lg">
-    <div class="input-group-prepend">
-      <span class="input-group-text" id="inputGroup-sizing-lg">5pm</span>
-    </div>
-    <input type="text" class="form-control formInput_17" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
-    <div class="input-group-append">
-        <button class="btn5 btn-outline-secondary" type="button">Save</button>
-      </div>
-  </div>
-</div>
-
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-<script src="assets/script.js"></script>
- 
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="./assets/script.js"></script>
 </body>
+
 </html>
+
