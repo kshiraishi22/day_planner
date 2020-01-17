@@ -23,10 +23,12 @@ $(document).ready(function() {
         } else if (now.isBefore(thisHours)) {
           timeClass = "future";
         }
+        
         var hourTXT = moment().hour(hour).format("h a");
         var hourID = moment().hour(hour).format("h");
         var event = schedule[hourTXT];
         var parent = $("<div class='row time-block'>");
+        
         // *** ADDED AN ID TO THE PARENT DIV *** 
         parent.attr("id", hourID);
         var timeCOL = $("<div class='hour col-1'>").text(hourTXT);
@@ -38,6 +40,7 @@ $(document).ready(function() {
       }
       var saveBtnClick = $(".saveBtn");
       var textInput = $("data-attribute").val();
+
     $(saveBtnClick).on("click", function() {
       // we need to grab the specific save button associated with the proper 'data-attribute' hour <textarea> element
       // console.log($(this).siblings()[1].val());
