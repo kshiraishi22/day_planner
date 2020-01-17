@@ -4,8 +4,6 @@ $(document).ready(function() {
   var currentDayELEM = $("#currentDay");
   var scheduleELEM = $("#schedule");
 
-// hours = ["9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm"];
-
 // Time Display
   setInterval(function () {
     currentDayELEM.text(moment().format("MMMM Do YYYY, h:mm:ss a"));
@@ -44,19 +42,18 @@ $(document).ready(function() {
     }
 
     var saveBtnClick = $(".saveBtn");
-    var textInput = $(".description").val();
+    var textInput = $("data-attribute").val();
 
   $(saveBtnClick).on("click", function() {
-    var storedInput = JSON.parse(localStorage.getItem("input")) || [];
     var formFields = JSON.stringify(localStorage.setItem("Test", textInput)); 
-
+    var storedInput = JSON.parse(localStorage.getItem("input")) || [];
     console.log("this works");
 
 // Comment out to make the code more readable (html/css/js)
 
 // ReadMe file
 
-    
+
   
   });
 });
