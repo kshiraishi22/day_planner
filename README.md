@@ -8,12 +8,16 @@ This is a calendar application that allows the user to save events for each hour
 
 Each of the time slots represents one hour and contains the following:
 
--Time
+- Time
 
--A field to hold user input
+- A field to hold user input
 
--Save button
+- Save button
 
 When the user provides input into a given time slot and clicks the save button, the user input and the corresponding time will be stored in localStorage. 
 
-Lastly, this application uses the Moment.js library to display at the top of the calendar, the current day and time. In addition, the library allows each hour will be color coded to reflect whether the time slot is in the past, the present, or the future.
+Lastly, this application uses the Moment.js library to display the current day and time at the top of the calendar. In addition, the library allows each hour to be color coded to reflect whether the time slot is in the past, the present, or the future.
+
+<hr>
+
+Github Page: https://kshiraishi22.github.io/hwk_5/
