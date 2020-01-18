@@ -23,7 +23,7 @@ $(document).ready(function() {
         } else if (now.isBefore(thisHours)) {
           timeClass = "future";
         }
-        
+
         var hourTXT = moment().hour(hour).format("h a");
         var hourID = moment().hour(hour).format("h");
         var event = schedule[hourTXT];
@@ -58,7 +58,7 @@ $(document).ready(function() {
     $("#9 .description").val(localStorage.getItem("9 am"));
     $("#10 .description").val(localStorage.getItem("10 am"));
     $("#11 .description").val(localStorage.getItem("11 am"));
-    $("#12 .description").val(localStorage.getItem("12 mm"));
+    $("#12 .description").val(localStorage.getItem("12 pm"));
     $("#1 .description").val(localStorage.getItem("1 pm"));
     $("#2 .description").val(localStorage.getItem("2 pm"));
     $("#3 .description").val(localStorage.getItem("3 pm"));
