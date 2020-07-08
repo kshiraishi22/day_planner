@@ -16,7 +16,7 @@ Each of the time slots represents one hour and contains the following:
 
 When the user provides input into a given time slot and clicks the save button, the user input and the corresponding time will be stored in localStorage. 
 
-Lastly, this application uses the Moment.js library to display the current day and time at the top of the calendar. In addition, the library allows each hour to be color coded to reflect whether the time slot is in the past, the present, or the future.
+Lastly, this application uses the Moment.js library to display the current day and time at the top of the calendar. In addition, the library allows each hour to be color coded to reflect whether the time slot is in the past(greyed out), the present (red), or the future (green).
 
 <hr>
 
